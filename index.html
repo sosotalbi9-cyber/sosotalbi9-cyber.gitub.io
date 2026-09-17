@@ -18,14 +18,98 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Correctifs stricts de lisibilité -->
+  <style>
+    /* Forcer la lisibilité totale de TOUS les textes dans les cartes blanches */
+    .skills-category, 
+    .skills-category *,
+    .portfolio-wrap, 
+    .portfolio-wrap *,
+    .service-card, 
+    .service-card *,
+    .info-box, 
+    .info-box *,
+    .contact-form, 
+    .contact-form *,
+    .resume-side, 
+    .resume-side *,
+    .resume-section,
+    .resume-section * {
+      color: #1e293b !important;
+    }
+
+    /* Titres principaux dans les cartes blanches */
+    .skills-category h3, .skills-category h4, 
+    .portfolio-wrap h4, .service-card h3, 
+    .resume-side h3, .resume-section h3, .resume-item h4,
+    .info-box h3, .info-box h4, .contact-form h3 {
+      color: #0f172a !important;
+      font-weight: 700 !important;
+    }
+
+    /* Textes secondaires, listes et descriptions dans les cartes */
+    .skill-tooltip, 
+    .portfolio-wrap p, 
+    .service-card p, 
+    .resume-item p, 
+    .resume-side p,
+    .resume-side li,
+    .resume-section li,
+    .contact-info li,
+    .contact-info a {
+      color: #334155 !important;
+    }
+
+    /* Rétablir les couleurs des icônes et badges */
+    .text-primary, 
+    .bi-arrow-right-short,
+    .resume-side i,
+    .skills-category i,
+    .service-card i,
+    .portfolio-wrap i {
+      color: #0d6efd !important;
+    }
+
+    /* Badges de dates */
+    .resume-item .badge {
+      background-color: #f1f5f9 !important;
+      color: #0f172a !important;
+      border: 1px solid #cbd5e1 !important;
+    }
+
+    /* Section À propos sur fond sombre */
+    .about .description p {
+      color: #cbd5e1 !important;
+    }
+    .about .contact-item {
+      color: #e2e8f0 !important;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .about .contact-item i {
+      color: #38bdf8 !important;
+    }
+    .about .detail-label {
+      color: #38bdf8 !important;
+    }
+    .about .detail-label i {
+      color: #38bdf8 !important;
+    }
+    .about .detail-value {
+      color: #f8fafc !important;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -47,8 +131,8 @@
       </nav>
 
       <div class="social-links text-center">
-        <a href="https://github.com" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://linkedin.com" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/sosotalbi9-cyber" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://fr.linkedin.com/in/sofiane-talbi-548b96334?trk=people-guest_people_search-card" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </header>
@@ -67,27 +151,32 @@
           <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
               <div class="hero-text">
-                <h1>Snap<span class="accent-text">Folio</span></h1>
+                <h1>Portfolio<span class="accent-text">.</span></h1>
                 <h2>Sofiane Talbi</h2>
-                <p class="lead">Étudiant en <span class="typed" data-typed-items="BTS SIO SISR, Administration Systèmes & Réseaux, Programmation C / Python, Développement Web"></span></p>
-                <p class="description">Étudiant en 1ère année de BTS SIO (option SISR), je me forme à l'administration des systèmes, aux réseaux et à la sécurité des infrastructures informatiques, tout en consolidant mes compétences en développement et bases de données.</p>
+                <p class="lead">Étudiant en <span class="typed" data-typed-items="BTS SIO SISR, Administration Systèmes & Réseaux, Programmation C / Python, Bases de données & Web">BTS SIO SISR</span></p>
+                <p class="description">Étudiant en 1ère année de BTS SIO (option SISR), je me forme à l'administration des systèmes, aux réseaux et à la sécurité des infrastructures informatiques, tout en mobilisant mes acquis en développement logiciel et gestion de données.</p>
 
                 <div class="hero-actions">
-                  <a href="#portfolio" class="btn btn-primary">Voir mes projets</a>
-                  <a href="#contact" class="btn btn-outline">Me contacter</a>
+                  <a href="#portfolio" class="btn btn-primary"><i class="bi bi-folder2-open me-2"></i>Voir mes projets</a>
+                  <a href="#contact" class="btn btn-outline"><i class="bi bi-chat-left-dots me-2"></i>Me contacter</a>
                 </div>
 
-                <div class="social-links">
-                  <a href="https://github.com"><i class="bi bi-github"></i></a>
-                  <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+                <div class="social-links mt-4">
+                  <a href="https://github.com/sosotalbi9-cyber"><i class="bi bi-github"></i></a>
+                  <a href="https://fr.linkedin.com/in/sofiane-talbi-548b96334?trk=people-guest_people_search-card"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-              <div class="hero-visual">
-                <div class="profile-container">
-                  <div class="profile-background"></div>
+              <div class="hero-visual text-center">
+                <div class="profile-container position-relative overflow-hidden shadow-lg rounded-4 border border-secondary border-opacity-25">
+                  <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Infrastructures Réseaux et Serveurs" class="img-fluid w-100 object-fit-cover" style="max-height: 440px;">
+                  <div class="position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-75 p-3 text-white d-flex justify-content-around">
+                    <span><i class="bi bi-hdd-network text-primary me-1"></i> Réseaux</span>
+                    <span><i class="bi bi-terminal text-primary me-1"></i> Linux</span>
+                    <span><i class="bi bi-shield-lock text-primary me-1"></i> Sécurité</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -101,27 +190,27 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="profile-card">
-              <div class="profile-header">
-                <div class="profile-image"></div>
-                <div class="profile-badge">
-                  <i class="bi bi-check-circle-fill"></i>
+            <div class="profile-card shadow-sm border rounded-4 overflow-hidden" style="background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1) !important;">
+              <div class="profile-header position-relative">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" alt="Espace de travail informatique" class="img-fluid w-100" style="height: 220px; object-fit: cover;">
+                <div class="profile-badge position-absolute top-0 end-0 m-3 text-primary bg-white rounded-circle px-2 py-1 shadow">
+                  <i class="bi bi-check-circle-fill fs-5"></i>
                 </div>
               </div>
 
-              <div class="profile-content">
-                <h3>Sofiane Talbi</h3>
-                <div class="contact-links">
-                  <a href="mailto:sosotalbi9@gmail.com" class="contact-item">
-                    <i class="bi bi-envelope"></i>
+              <div class="profile-content p-4">
+                <h3 class="mb-3 text-white">Sofiane Talbi</h3>
+                <div class="contact-links d-flex flex-column gap-2">
+                  <a href="mailto:sosotalbi9@gmail.com" class="contact-item text-decoration-none">
+                    <i class="bi bi-envelope-at me-2"></i>
                     sosotalbi9@gmail.com
                   </a>
-                  <a href="tel:+33652318681" class="contact-item">
-                    <i class="bi bi-telephone"></i>
+                  <a href="tel:+33652318681" class="contact-item text-decoration-none">
+                    <i class="bi bi-telephone-outbound me-2"></i>
                     06 52 31 86 81
                   </a>
-                  <a href="#" class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
+                  <a href="#" class="contact-item text-decoration-none">
+                    <i class="bi bi-geo-alt-fill me-2"></i>
                     Quincy-Sous-Sénart, Île-de-France
                   </a>
                 </div>
@@ -131,46 +220,46 @@
 
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
-              <div class="section-header">
-                <span class="badge-text">Présentation</span>
-                <h2>Profil Technique & Rigueur Opérationnelle</h2>
+              <div class="section-header mb-4">
+                <span class="badge-text"><i class="bi bi-info-circle me-1"></i>Présentation</span>
+                <h2 class="text-white">Profil Technique & Rigueur Opérationnelle</h2>
               </div>
 
               <div class="description">
-                <p>Étudiant sérieux, motivé et autonome en 1ère année de BTS SIO. Je développe un profil polyvalent articulé autour de l'infrastructure réseau, de l'administration système et du développement logiciel.</p>
-                <p>Parallèlement à ma formation, j'exerce une activité professionnelle continue en CDI chaque week-end, ce qui témoigne d'une résilience organisationnelle solide, d'une gestion rigoureuse des priorités et d'une grande adaptabilité technique.</p>
+                <p>Étudiant méthodique et autonome en 1ère année de BTS SIO, je construis un socle solide axé sur l'administration réseau, la maintenance de systèmes et l'intégration d'environnements techniques sécurisés.</p>
+                <p>Parallèlement à mes études, j'exerce une activité professionnelle continue en CDI chaque week-end, démontrant une gestion rigoureuse des priorités, une résistance éprouvée à la charge de travail et une forte adaptabilité.</p>
               </div>
 
-              <div class="details-grid">
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Formation</span>
-                    <span class="detail-value">BTS SIO (SISR)</span>
+              <div class="details-grid mt-4">
+                <div class="detail-row row g-3 mb-2">
+                  <div class="col-sm-6 detail-item">
+                    <span class="detail-label fw-bold d-block"><i class="bi bi-mortarboard-fill me-2"></i>Formation</span>
+                    <span class="detail-value">BTS SIO (Option SISR)</span>
                   </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Statut</span>
+                  <div class="col-sm-6 detail-item">
+                    <span class="detail-label fw-bold d-block"><i class="bi bi-briefcase-fill me-2"></i>Statut</span>
                     <span class="detail-value">Étudiant / Salarié CDI Week-end</span>
                   </div>
                 </div>
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Mobilité</span>
+                <div class="detail-row row g-3">
+                  <div class="col-sm-6 detail-item">
+                    <span class="detail-label fw-bold d-block"><i class="bi bi-car-front-fill me-2"></i>Mobilité</span>
                     <span class="detail-value">Permis B (Véhiculé)</span>
                   </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Langues</span>
+                  <div class="col-sm-6 detail-item">
+                    <span class="detail-label fw-bold d-block"><i class="bi bi-translate me-2"></i>Langues</span>
                     <span class="detail-value">Français, Anglais, Espagnol</span>
                   </div>
                 </div>
               </div>
 
-              <div class="cta-section">
+              <div class="cta-section mt-4 d-flex gap-3">
                 <a href="#resume" class="btn btn-primary">
-                  <i class="bi bi-download"></i>
-                  Consulter le CV
+                  <i class="bi bi-file-earmark-person me-2"></i>
+                  Consulter le parcours
                 </a>
                 <a href="#contact" class="btn btn-outline">
-                  <i class="bi bi-chat-dots"></i>
+                  <i class="bi bi-send me-2"></i>
                   Prendre contact
                 </a>
               </div>
@@ -188,82 +277,82 @@
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
+        <div class="row g-4">
           <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-              <h3>Systèmes & Réseaux</h3>
+            <div class="skills-category p-4 border rounded-4 bg-white shadow-sm h-100" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="mb-4"><i class="bi bi-diagram-3-fill text-primary me-2"></i>Systèmes & Réseaux</h3>
               <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Linux & Bash (Debian, Arch)</h4>
-                    <span class="skill-percentage">75%</span>
+                <div class="skill-item mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-6 mb-0"><i class="bi bi-terminal me-2 text-primary"></i>Linux & Scripting Bash (Debian, Arch)</h4>
+                    <span class="skill-percentage fw-bold text-primary">75%</span>
                   </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">Gestion des droits, scripts d'automatisation, configuration de services</div>
+                  <div class="skill-tooltip mt-1">Gestion des droits, scripts d'automatisation, configuration de services</div>
+                </div>
+
+                <div class="skill-item mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-6 mb-0"><i class="bi bi-router me-2 text-primary"></i>Réseaux & Adressage IPv4</h4>
+                    <span class="skill-percentage fw-bold text-primary">70%</span>
+                  </div>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip mt-1">Subnetting CIDR, protocoles ARP/IP, analyse de paquets</div>
                 </div>
 
                 <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Réseaux & Adressage IPv4</h4>
-                    <span class="skill-percentage">70%</span>
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-6 mb-0"><i class="bi bi-folder-symlink me-2 text-primary"></i>Services Réseau & Partages (Samba/CIFS)</h4>
+                    <span class="skill-percentage fw-bold text-primary">70%</span>
                   </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">Subnetting CIDR, protocoles ARP/IP, routage et analyse de paquets</div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Services Réseau & Partage (Samba/CIFS)</h4>
-                    <span class="skill-percentage">70%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Déploiement de serveurs de fichiers et gestion des accès utilisateurs</div>
+                  <div class="skill-tooltip mt-1">Serveurs de fichiers, permissions POSIX et montage réseau sécurisé</div>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-              <h3>Développement & Données</h3>
+            <div class="skills-category p-4 border rounded-4 bg-white shadow-sm h-100" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="mb-4"><i class="bi bi-code-slash text-primary me-2"></i>Développement & Données</h3>
               <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>C (Norme ANSI / C89) & Python 3</h4>
-                    <span class="skill-percentage">80%</span>
+                <div class="skill-item mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-6 mb-0"><i class="bi bi-filetype-py me-2 text-primary"></i>Langage C (Norme ANSI C89) & Python 3</h4>
+                    <span class="skill-percentage fw-bold text-primary">80%</span>
                   </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">Algorithmique, structures de données, allocation dynamique et scripts</div>
+                  <div class="skill-tooltip mt-1">Algorithmique, gestion dynamique de mémoire et automatisation logicielle</div>
+                </div>
+
+                <div class="skill-item mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-6 mb-0"><i class="bi bi-database me-2 text-primary"></i>Bases de données SQL (MySQL / Oracle)</h4>
+                    <span class="skill-percentage fw-bold text-primary">75%</span>
+                  </div>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip mt-1">Modélisation conceptuelle, algèbre relationnelle et requêtes complexes</div>
                 </div>
 
                 <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Bases de données SQL (MySQL / Oracle)</h4>
-                    <span class="skill-percentage">75%</span>
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h4 class="fs-6 mb-0"><i class="bi bi-filetype-html me-2 text-primary"></i>Développement Web (HTML5 / CSS3 / JS)</h4>
+                    <span class="skill-percentage fw-bold text-primary">70%</span>
                   </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">Modélisation relationnelle, algèbre relationnelle, requêtes SQL</div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Web (HTML5 / CSS3 / PHP)</h4>
-                    <span class="skill-percentage">70%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Mises en page responsives et architecture applicative</div>
+                  <div class="skill-tooltip mt-1">Intégration d'interfaces responsives et structuration front-end</div>
                 </div>
               </div>
             </div>
@@ -282,77 +371,79 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-4">
-            <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
-              <h3>Profil Synthétique</h3>
-              <p>Étudiant orienté infrastructures systèmes et réseaux, combinant une pratique du développement bas niveau et web avec un sens affirmé du travail en équipe.</p>
+            <div class="resume-side p-4 border rounded-4 bg-white shadow-sm" data-aos="fade-right" data-aos-delay="100">
+              <h3><i class="bi bi-person-lines-fill text-primary me-2"></i>Profil Synthétique</h3>
+              <p class="small">Étudiant orienté infrastructures systèmes et réseaux, combinant une pratique méthodique de l'informatique avec un sens affirmé du travail en équipe.</p>
 
-              <h3 class="mt-4">Coordonnées</h3>
-              <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> Quincy-Sous-Sénart (91), Île-de-France</li>
-                <li><i class="bi bi-envelope"></i> sosotalbi9@gmail.com</li>
-                <li><i class="bi bi-phone"></i> 06 52 31 86 81</li>
-                <li><i class="bi bi-check2-circle"></i> Permis B - Véhicule personnel</li>
+              <h3 class="mt-4"><i class="bi bi-pin-map text-primary me-2"></i>Coordonnées</h3>
+              <ul class="contact-info list-unstyled small">
+                <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i><span>Quincy-Sous-Sénart (91), Île-de-France</span></li>
+                <li class="mb-2"><i class="bi bi-envelope me-2 text-primary"></i><span>sosotalbi9@gmail.com</span></li>
+                <li class="mb-2"><i class="bi bi-phone me-2 text-primary"></i><span>06 52 31 86 81</span></li>
+                <li><i class="bi bi-car-front me-2 text-primary"></i><span>Permis B - Véhicule personnel</span></li>
               </ul>
 
               <div class="skills-animation mt-4">
-                <h3>Atouts Personnels</h3>
-                <p>• Rigueur et résilience organisationnelle (CDI + Études)<br>
-                   • Travail collaboratif & esprit d'équipe<br>
-                   • Pratique du basket-ball (Assistant coach)<br>
-                   • Joueur d'échecs régulier (~1000 Elo)</p>
+                <h3><i class="bi bi-star-fill text-primary me-2"></i>Atouts Personnels</h3>
+                <ul class="list-unstyled small">
+                  <li class="mb-2"><i class="bi bi-shield-check text-primary me-2"></i><span>Rigueur & résilience (CDI + Études)</span></li>
+                  <li class="mb-2"><i class="bi bi-people-fill text-primary me-2"></i><span>Travail collaboratif & écoute active</span></li>
+                  <li class="mb-2"><i class="bi bi-dribbble text-primary me-2"></i><span>Basket-ball (Assistant coach bénévole)</span></li>
+                  <li><i class="bi bi-controller text-primary me-2"></i><span>Joueur d'échecs régulier (~1000 Elo)</span></li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-8 ps-4 ps-lg-5">
-            <div class="resume-section" data-aos="fade-up">
-              <h3><i class="bi bi-briefcase me-2"></i>Expériences Professionnelles & Engagements</h3>
+          <div class="col-lg-8 ps-lg-4">
+            <div class="resume-section p-4 border rounded-4 bg-white shadow-sm mb-4" data-aos="fade-up">
+              <h3 class="mb-4"><i class="bi bi-briefcase text-primary me-2"></i>Expériences Professionnelles & Engagements</h3>
 
-              <div class="resume-item">
-                <h4>Équipier Polyvalent (CDI Week-end)</h4>
-                <h5>Depuis Septembre 2025</h5>
-                <p class="company"><i class="bi bi-building"></i> Carrefour — Boussy-Saint-Antoine</p>
-                <ul>
-                  <li>Gestion opérationnelle, réapprovisionnement et mise en rayon en flux tendu.</li>
-                  <li>Accueil et orientation des clients sous forte affluence.</li>
-                  <li>Application rigoureuse des normes de conformité et des consignes d'hygiène et sécurité.</li>
-                  <li>Capacité d'adaptation rapide face aux ruptures logistiques et contraintes d'urgence.</li>
+              <div class="resume-item border-start border-2 border-primary ps-3 mb-4">
+                <h4 class="fs-5 mb-1"><i class="bi bi-cart-check me-2 text-primary"></i>Équipier Polyvalent (CDI Week-end)</h4>
+                <h5 class="badge mb-2">Depuis Septembre 2025</h5>
+                <p class="company fw-bold mb-2"><i class="bi bi-building me-1"></i> Carrefour — Boussy-Saint-Antoine</p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-1"><i class="bi bi-arrow-right-short text-primary me-1"></i><span>Gestion opérationnelle, réapprovisionnement et mise en rayon en flux tendu.</span></li>
+                  <li class="mb-1"><i class="bi bi-arrow-right-short text-primary me-1"></i><span>Accueil et orientation de la clientèle lors des pics d'affluence.</span></li>
+                  <li class="mb-1"><i class="bi bi-arrow-right-short text-primary me-1"></i><span>Application rigoureuse des normes de sécurité et des consignes d'hygiène.</span></li>
+                  <li><i class="bi bi-arrow-right-short text-primary me-1"></i><span>Adaptabilité immédiate face aux contraintes logistiques et de réapprovisionnement.</span></li>
                 </ul>
               </div>
 
-              <div class="resume-item">
-                <h4>Assistant Coach Bénévole</h4>
-                <h5>2024 - 2025</h5>
-                <p class="company"><i class="bi bi-trophy"></i> Club de Basket-ball — Quincy-sous-Sénart</p>
-                <ul>
-                  <li>Encadrement technique des entraînements et animation d'ateliers pédagogiques.</li>
-                  <li>Accompagnement, écoute et suivi des joueurs lors des compétitions officielles.</li>
+              <div class="resume-item border-start border-2 border-primary ps-3">
+                <h4 class="fs-5 mb-1"><i class="bi bi-trophy me-2 text-primary"></i>Assistant Coach Bénévole</h4>
+                <h5 class="badge mb-2">2024 - 2025</h5>
+                <p class="company fw-bold mb-2"><i class="bi bi-geo-alt me-1"></i> Club de Basket-ball — Quincy-sous-Sénart</p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-1"><i class="bi bi-arrow-right-short text-primary me-1"></i><span>Encadrement pédagogique des séances d'entraînement et animation d'ateliers techniques.</span></li>
+                  <li><i class="bi bi-arrow-right-short text-primary me-1"></i><span>Suivi individuel des joueurs et soutien tactique lors des rencontres de championnat.</span></li>
                 </ul>
               </div>
             </div>
 
-            <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
-              <h3><i class="bi bi-mortarboard me-2"></i>Formation Académique</h3>
+            <div class="resume-section p-4 border rounded-4 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="mb-4"><i class="bi bi-mortarboard text-primary me-2"></i>Formation Académique</h3>
 
-              <div class="resume-item">
-                <h4>BTS SIO (Option SISR)</h4>
-                <h5>En cours</h5>
-                <p class="company"><i class="bi bi-building"></i> Lycée Léonard de Vinci — Melun</p>
-                <p>Solutions d'Infrastructure, Systèmes et Réseaux : administration serveurs, adressage IP, architectures réseau et sécurité.</p>
+              <div class="resume-item border-start border-2 border-primary ps-3 mb-4">
+                <h4 class="fs-5 mb-1"><i class="bi bi-pc-display-horizontal me-2 text-primary"></i>BTS SIO (Option SISR)</h4>
+                <h5 class="badge mb-2">En cours</h5>
+                <p class="company fw-bold mb-1"><i class="bi bi-building me-1"></i> Lycée Léonard de Vinci — Melun</p>
+                <p class="small mb-0">Solutions d'Infrastructure, Systèmes et Réseaux : déploiement d'équipements, adressage IP, serveurs d'entreprise et cybersécurité.</p>
               </div>
 
-              <div class="resume-item">
-                <h4>BUT Informatique (1ère année)</h4>
-                <h5>2025 - 2026</h5>
-                <p class="company"><i class="bi bi-building"></i> IUT de Fontainebleau — UPEC</p>
-                <p>Fondamentaux du développement (C, Python), structures de données, modélisation SQL et environnements Linux.</p>
+              <div class="resume-item border-start border-2 border-primary ps-3 mb-4">
+                <h4 class="fs-5 mb-1"><i class="bi bi-laptop me-2 text-primary"></i>BUT Informatique (1ère année)</h4>
+                <h5 class="badge mb-2">2025 - 2026</h5>
+                <p class="company fw-bold mb-1"><i class="bi bi-building me-1"></i> IUT de Fontainebleau — UPEC</p>
+                <p class="small mb-0">Enseignements fondamentaux : algorithmique en langage C, programmation Python, modélisation SQL et administration de base sous Linux.</p>
               </div>
 
-              <div class="resume-item">
-                <h4>Baccalauréat Général</h4>
-                <h5>2025</h5>
-                <p class="company"><i class="bi bi-building"></i> Lycée Maurice Eliot — Épinay-sous-Sénart</p>
-                <p>Spécialités : Mathématiques et Physique-Chimie.</p>
+              <div class="resume-item border-start border-2 border-primary ps-3">
+                <h4 class="fs-5 mb-1"><i class="bi bi-journal-bookmark-fill me-2 text-primary"></i>Baccalauréat Général</h4>
+                <h5 class="badge mb-2">2025</h5>
+                <p class="company fw-bold mb-1"><i class="bi bi-building me-1"></i> Lycée Maurice Eliot — Épinay-sous-Sénart</p>
+                <p class="small mb-0">Spécialités suivies : Mathématiques et Physique-Chimie.</p>
               </div>
             </div>
           </div>
@@ -364,32 +455,59 @@
     <section id="portfolio" class="portfolio section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Projets Réalisés</h2>
-        <p>Sélection de projets techniques développés en milieu académique et personnel.</p>
+        <p>Sélection de projets techniques développés en formation et lors de projets personnels.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap p-4 border rounded bg-white h-100">
-              <span class="badge bg-secondary mb-2">Systèmes & Réseaux</span>
-              <h4>Serveur de Fichiers Samba</h4>
-              <p>Mise en place d'un serveur Samba sous Linux : création d'utilisateurs/groupes, gestion des permissions POSIX et montage CIFS sur machines clientes.</p>
+            <div class="portfolio-wrap border rounded-4 bg-white h-100 shadow-sm overflow-hidden d-flex flex-column">
+              <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80" alt="Serveur Samba et Linux" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="badge bg-primary text-white"><i class="bi bi-hdd-network me-1"></i>Réseaux & Partage</span>
+                  <i class="bi bi-server fs-5 text-primary"></i>
+                </div>
+                <h4 class="fs-5">Serveur de Fichiers Samba</h4>
+                <p class="small flex-grow-1">Mise en place d'un partage centralisé sous Linux : création d'utilisateurs et de groupes, affectation de droits POSIX et montage CIFS sur machines distantes.</p>
+                <div class="border-top pt-3 small">
+                  <i class="bi bi-terminal-fill me-1 text-primary"></i> Linux • Samba • Bash
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap p-4 border rounded bg-white h-100">
-              <span class="badge bg-secondary mb-2">Programmation C</span>
-              <h4>Jeu de Taquin (C89)</h4>
-              <p>Développement complet d'un jeu de taquin en langage C strict : manipulation de grilles dynamiques, logique algorithmique et compilation via Makefile.</p>
+            <div class="portfolio-wrap border rounded-4 bg-white h-100 shadow-sm overflow-hidden d-flex flex-column">
+              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80" alt="Code C et Algorithmique" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="badge bg-primary text-white"><i class="bi bi-code-square me-1"></i>Programmation C</span>
+                  <i class="bi bi-grid-3x3-gap-fill fs-5 text-primary"></i>
+                </div>
+                <h4 class="fs-5">Jeu de Taquin (C89)</h4>
+                <p class="small flex-grow-1">Implémentation complète en langage C selon la norme ANSI : gestion matricielle de la grille, moteur de déplacement sans fuite mémoire et automatisation Makefile.</p>
+                <div class="border-top pt-3 small">
+                  <i class="bi bi-gear-fill me-1 text-primary"></i> C (ANSI) • Makefile • Gitea
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap p-4 border rounded bg-white h-100">
-              <span class="badge bg-secondary mb-2">Programmation Java</span>
-              <h4>Jeu du Démineur (GUI)</h4>
-              <p>Conception d'une application de Démineur avec interface graphique Java Swing, gestion événementielle et système de sauvegarde de l'état de la partie.</p>
+            <div class="portfolio-wrap border rounded-4 bg-white h-100 shadow-sm overflow-hidden d-flex flex-column">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80" alt="Application Java Swing" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="badge bg-primary text-white"><i class="bi bi-window-desktop me-1"></i>Programmation Java</span>
+                  <i class="bi bi-boxes fs-5 text-primary"></i>
+                </div>
+                <h4 class="fs-5">Jeu du Démineur (GUI)</h4>
+                <p class="small flex-grow-1">Conception orientée objet avec interface graphique Java Swing : gestion des événements souris/clavier, chronomètre et module de sauvegarde de partie.</p>
+                <div class="border-top pt-3 small">
+                  <i class="bi bi-cup-hot-fill me-1 text-primary"></i> Java • Swing • POO
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -406,32 +524,47 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center g-4">
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1 p-4 border rounded h-100">
-              <div class="service-icon mb-3">
-                <i class="bi bi-hdd-network fs-2"></i>
+            <div class="service-card p-4 border rounded-4 h-100 shadow-sm bg-white d-flex flex-column">
+              <div class="service-icon mb-3 text-primary">
+                <i class="bi bi-hdd-network fs-1"></i>
               </div>
-              <h3>Administration Réseau</h3>
-              <p>Configuration de plans d'adressage IPv4, segmentation réseau (VLAN), protocoles de routage et analyse des trames réseau.</p>
+              <h3 class="fs-5">Administration Réseau</h3>
+              <p class="small flex-grow-1">Configuration de plans d'adressage IPv4, segmentation réseau (VLAN), protocoles de routage et analyse des trames réseau.</p>
+              <div class="d-flex gap-2 text-primary mt-3 pt-3 border-top">
+                <i class="bi bi-ethernet fs-4"></i>
+                <i class="bi bi-shield-check fs-4"></i>
+                <i class="bi bi-activity fs-4"></i>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1 p-4 border rounded h-100">
-              <div class="service-icon mb-3">
-                <i class="bi bi-terminal fs-2"></i>
+            <div class="service-card p-4 border rounded-4 h-100 shadow-sm bg-white d-flex flex-column">
+              <div class="service-icon mb-3 text-primary">
+                <i class="bi bi-terminal-split fs-1"></i>
               </div>
-              <h3>Systèmes & Automatisation</h3>
-              <p>Gestion et maintenance d'environnements Linux/Windows, automatisation via scripts Bash et administration des droits d'accès.</p>
+              <h3 class="fs-5">Systèmes & Automatisation</h3>
+              <p class="small flex-grow-1">Gestion et maintenance d'environnements Linux/Windows, automatisation de tâches récurrentes via scripts Bash et gestion des habilitations.</p>
+              <div class="d-flex gap-2 text-primary mt-3 pt-3 border-top">
+                <i class="bi bi-ubuntu fs-4"></i>
+                <i class="bi bi-windows fs-4"></i>
+                <i class="bi bi-gear-wide-connected fs-4"></i>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1 p-4 border rounded h-100">
-              <div class="service-icon mb-3">
-                <i class="bi bi-code-square fs-2"></i>
+            <div class="service-card p-4 border rounded-4 h-100 shadow-sm bg-white d-flex flex-column">
+              <div class="service-icon mb-3 text-primary">
+                <i class="bi bi-code-square fs-1"></i>
               </div>
-              <h3>Développement d'Outils</h3>
-              <p>Écriture de scripts applicatifs en Python et C, conception de requêtes SQL et structuration de bases de données relationnelles.</p>
+              <h3 class="fs-5">Développement d'Outils</h3>
+              <p class="small flex-grow-1">Écriture de scripts applicatifs en Python et C, conception de requêtes SQL et structuration de bases de données relationnelles fiables.</p>
+              <div class="d-flex gap-2 text-primary mt-3 pt-3 border-top">
+                <i class="bi bi-filetype-py fs-4"></i>
+                <i class="bi bi-filetype-sql fs-4"></i>
+                <i class="bi bi-braces fs-4"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -448,64 +581,61 @@
       <div class="container">
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
-            <div class="info-box">
-              <h3>Informations Directes</h3>
-              <p>N'hésitez pas à me joindre directement par e-mail ou par téléphone.</p>
+            <div class="info-box p-4 border rounded-4 bg-white shadow-sm h-100">
+              <h3 class="fs-5 mb-3"><i class="bi bi-chat-square-text text-primary me-2"></i>Informations Directes</h3>
+              <p class="small mb-4">N'hésitez pas à me joindre directement pour toute demande d'entretien ou d'échange technique.</p>
 
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-geo-alt"></i>
+              <div class="info-item d-flex align-items-start mb-3">
+                <div class="icon-box text-primary fs-4 me-3">
+                  <i class="bi bi-geo-alt-fill"></i>
                 </div>
-                <div class="content">
-                  <h4>Localisation</h4>
-                  <p>Quincy-Sous-Sénart, Île-de-France (Permis B / Véhiculé)</p>
+                <div>
+                  <h4 class="fs-6 mb-1">Localisation</h4>
+                  <p class="small mb-0">Quincy-Sous-Sénart, Île-de-France (Permis B / Véhiculé)</p>
                 </div>
               </div>
 
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-telephone"></i>
+              <div class="info-item d-flex align-items-start mb-3">
+                <div class="icon-box text-primary fs-4 me-3">
+                  <i class="bi bi-telephone-fill"></i>
                 </div>
-                <div class="content">
-                  <h4>Téléphone</h4>
-                  <p>06 52 31 86 81</p>
+                <div>
+                  <h4 class="fs-6 mb-1">Téléphone</h4>
+                  <p class="small mb-0">06 52 31 86 81</p>
                 </div>
               </div>
 
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-envelope"></i>
+              <div class="info-item d-flex align-items-start">
+                <div class="icon-box text-primary fs-4 me-3">
+                  <i class="bi bi-envelope-fill"></i>
                 </div>
-                <div class="content">
-                  <h4>Adresse Email</h4>
-                  <p>sosotalbi9@gmail.com</p>
+                <div>
+                  <h4 class="fs-6 mb-1">Adresse Email</h4>
+                  <p class="small mb-0">sosotalbi9@gmail.com</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-7">
-            <div class="contact-form">
-              <h3>Envoyer un Message</h3>
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                <div class="row gy-4">
+            <div class="contact-form p-4 border rounded-4 bg-white shadow-sm">
+              <h3 class="fs-5 mb-3"><i class="bi bi-pencil-square text-primary me-2"></i>Envoyer un Message</h3>
+              <form action="mailto:sosotalbi9@gmail.com" method="post" enctype="text/plain">
+                <div class="row gy-3">
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Votre nom" required="">
+                    <input type="text" name="nom" class="form-control" placeholder="Votre nom" required>
                   </div>
                   <div class="col-md-6">
-                    <input type="email" class="form-control" name="email" placeholder="Votre e-mail" required="">
+                    <input type="email" name="email" class="form-control" placeholder="Votre e-mail" required>
                   </div>
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Objet" required="">
+                    <input type="text" name="sujet" class="form-control" placeholder="Objet" required>
                   </div>
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Votre message" required=""></textarea>
+                    <textarea class="form-control" name="message" rows="5" placeholder="Votre message" required></textarea>
                   </div>
                   <div class="col-12 text-center">
-                    <div class="loading">Chargement...</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Votre message a été envoyé. Merci !</div>
-                    <button type="submit" class="btn">Envoyer</button>
+                    <button type="submit" class="btn btn-primary px-4"><i class="bi bi-send-fill me-2"></i>Envoyer le message</button>
                   </div>
                 </div>
               </form>
@@ -517,27 +647,21 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative">
-    <div class="container">
-      <div class="copyright text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Sofiane Talbi</strong> <span>Tous droits réservés</span></p>
-      </div>
+  <footer id="footer" class="footer position-relative py-4 border-top bg-light">
+    <div class="container text-center">
+      <p class="mb-0 text-muted small">© <span>Copyright</span> <strong class="px-1 text-dark">Sofiane Talbi</strong> — BTS SIO SISR — Tous droits réservés</p>
     </div>
   </footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Vendor JS Files via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/js/purecounter_vanilla.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
